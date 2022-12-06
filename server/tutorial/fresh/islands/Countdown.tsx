@@ -7,6 +7,7 @@ const Countdown = (props: { target: string }) => {
   const [now, setNow] = useState(new Date());
 
   useEffect(() => {
+    // Trigger the effect
     const timer = setInterval(() => {
       setNow((now) => {
         if (now > target) {
@@ -17,6 +18,7 @@ const Countdown = (props: { target: string }) => {
       });
     }, 1000);
 
+    // Cleanup code, optional
     return () => clearInterval(timer);
   }, [props.target]);
 
