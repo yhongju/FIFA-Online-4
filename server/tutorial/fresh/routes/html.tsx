@@ -4,7 +4,7 @@ import { HandlerContext, Handlers, PageProps } from "$fresh/server.ts";
 
 export const handler: Handlers = {
   async GET(_req: Request, ctx: HandlerContext) {
-    const resp = await ctx.render(); // Response | Promise<Response>
+    const resp = await ctx.render(); // Promise<Response>
 
     resp.headers.set("X-Custom-Header", "Hello world");
 
