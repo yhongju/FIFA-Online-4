@@ -4,20 +4,24 @@
 
 import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/[name].tsx";
-import * as $1 from "./routes/_middleware.ts";
-import * as $2 from "./routes/about.tsx";
-import * as $3 from "./routes/api/joke.ts";
-import * as $4 from "./routes/api/random-uuid.ts";
-import * as $5 from "./routes/countdown.tsx";
-import * as $6 from "./routes/counter02.tsx";
-import * as $7 from "./routes/github/[username].tsx";
-import * as $8 from "./routes/greet/[name].tsx";
-import * as $9 from "./routes/html.tsx";
-import * as $10 from "./routes/index.tsx";
-import * as $11 from "./routes/myHandler.ts";
-import * as $12 from "./routes/plain.tsx";
-import * as $13 from "./routes/search.tsx";
-import * as $14 from "./routes/static.tsx";
+import * as $1 from "./routes/_404-trigger.tsx";
+import * as $2 from "./routes/_404.tsx";
+import * as $3 from "./routes/_500.tsx";
+import * as $4 from "./routes/_middleware-array.ts";
+import * as $5 from "./routes/_middleware.ts";
+import * as $6 from "./routes/about.tsx";
+import * as $7 from "./routes/api/joke.ts";
+import * as $8 from "./routes/api/random-uuid.ts";
+import * as $9 from "./routes/countdown.tsx";
+import * as $10 from "./routes/counter02.tsx";
+import * as $11 from "./routes/github/[username].tsx";
+import * as $12 from "./routes/greet/[name].tsx";
+import * as $13 from "./routes/html.tsx";
+import * as $14 from "./routes/index.tsx";
+import * as $15 from "./routes/myHandler.ts";
+import * as $16 from "./routes/plain.tsx";
+import * as $17 from "./routes/search.tsx";
+import * as $18 from "./routes/static.tsx";
 import * as $$0 from "./islands/Countdown.tsx";
 import * as $$1 from "./islands/Counter.tsx";
 import * as $$2 from "./islands/Counter02.tsx";
@@ -25,20 +29,24 @@ import * as $$2 from "./islands/Counter02.tsx";
 const manifest = {
   routes: {
     "./routes/[name].tsx": $0,
-    "./routes/_middleware.ts": $1,
-    "./routes/about.tsx": $2,
-    "./routes/api/joke.ts": $3,
-    "./routes/api/random-uuid.ts": $4,
-    "./routes/countdown.tsx": $5,
-    "./routes/counter02.tsx": $6,
-    "./routes/github/[username].tsx": $7,
-    "./routes/greet/[name].tsx": $8,
-    "./routes/html.tsx": $9,
-    "./routes/index.tsx": $10,
-    "./routes/myHandler.ts": $11,
-    "./routes/plain.tsx": $12,
-    "./routes/search.tsx": $13,
-    "./routes/static.tsx": $14,
+    "./routes/_404-trigger.tsx": $1,
+    "./routes/_404.tsx": $2,
+    "./routes/_500.tsx": $3,
+    "./routes/_middleware-array.ts": $4,
+    "./routes/_middleware.ts": $5,
+    "./routes/about.tsx": $6,
+    "./routes/api/joke.ts": $7,
+    "./routes/api/random-uuid.ts": $8,
+    "./routes/countdown.tsx": $9,
+    "./routes/counter02.tsx": $10,
+    "./routes/github/[username].tsx": $11,
+    "./routes/greet/[name].tsx": $12,
+    "./routes/html.tsx": $13,
+    "./routes/index.tsx": $14,
+    "./routes/myHandler.ts": $15,
+    "./routes/plain.tsx": $16,
+    "./routes/search.tsx": $17,
+    "./routes/static.tsx": $18,
   },
   islands: {
     "./islands/Countdown.tsx": $$0,
