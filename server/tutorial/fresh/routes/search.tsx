@@ -32,7 +32,7 @@ export default function Page({ data }: PageProps<Data>) {
       <ul>
         {results.map((name) => (
           <li key={name}>
-            > {name}
+            {">"} {name}
           </li>
         ))}
       </ul>
