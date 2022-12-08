@@ -5,11 +5,20 @@ interface State {
 }
 
 export async function handler(
-  req: Request,
+  _: Request,
   ctx: MiddlewareHandlerContext<State>,
 ) {
-  ctx.state.data = "myData";
+  ctx.state.data = "Data string from _middleware.ts";
+
+  /*
+   * ctx.next() method:
+   *
+   * Used to trigger child handlers
+   * It will invoke contextually proper specified handler
+   */
   const resp = await ctx.next();
   resp.headers.set("server", "fresh server");
+
+  // Final resp maybe
   return resp;
 }
