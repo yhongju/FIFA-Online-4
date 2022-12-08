@@ -4,36 +4,46 @@
 
 import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/[name].tsx";
-import * as $1 from "./routes/about.tsx";
-import * as $2 from "./routes/api/joke.ts";
-import * as $3 from "./routes/api/random-uuid.ts";
-import * as $4 from "./routes/countdown.tsx";
-import * as $5 from "./routes/github/[username].tsx";
-import * as $6 from "./routes/greet/[name].tsx";
-import * as $7 from "./routes/html.tsx";
-import * as $8 from "./routes/index.tsx";
-import * as $9 from "./routes/plain.tsx";
-import * as $10 from "./routes/search.tsx";
+import * as $1 from "./routes/_middleware.ts";
+import * as $2 from "./routes/about.tsx";
+import * as $3 from "./routes/api/joke.ts";
+import * as $4 from "./routes/api/random-uuid.ts";
+import * as $5 from "./routes/countdown.tsx";
+import * as $6 from "./routes/counter02.tsx";
+import * as $7 from "./routes/github/[username].tsx";
+import * as $8 from "./routes/greet/[name].tsx";
+import * as $9 from "./routes/html.tsx";
+import * as $10 from "./routes/index.tsx";
+import * as $11 from "./routes/myHandler.ts";
+import * as $12 from "./routes/plain.tsx";
+import * as $13 from "./routes/search.tsx";
+import * as $14 from "./routes/static.tsx";
 import * as $$0 from "./islands/Countdown.tsx";
 import * as $$1 from "./islands/Counter.tsx";
+import * as $$2 from "./islands/Counter02.tsx";
 
 const manifest = {
   routes: {
     "./routes/[name].tsx": $0,
-    "./routes/about.tsx": $1,
-    "./routes/api/joke.ts": $2,
-    "./routes/api/random-uuid.ts": $3,
-    "./routes/countdown.tsx": $4,
-    "./routes/github/[username].tsx": $5,
-    "./routes/greet/[name].tsx": $6,
-    "./routes/html.tsx": $7,
-    "./routes/index.tsx": $8,
-    "./routes/plain.tsx": $9,
-    "./routes/search.tsx": $10,
+    "./routes/_middleware.ts": $1,
+    "./routes/about.tsx": $2,
+    "./routes/api/joke.ts": $3,
+    "./routes/api/random-uuid.ts": $4,
+    "./routes/countdown.tsx": $5,
+    "./routes/counter02.tsx": $6,
+    "./routes/github/[username].tsx": $7,
+    "./routes/greet/[name].tsx": $8,
+    "./routes/html.tsx": $9,
+    "./routes/index.tsx": $10,
+    "./routes/myHandler.ts": $11,
+    "./routes/plain.tsx": $12,
+    "./routes/search.tsx": $13,
+    "./routes/static.tsx": $14,
   },
   islands: {
     "./islands/Countdown.tsx": $$0,
     "./islands/Counter.tsx": $$1,
+    "./islands/Counter02.tsx": $$2,
   },
   baseUrl: import.meta.url,
   config,
