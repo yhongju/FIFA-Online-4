@@ -19,9 +19,12 @@ import * as $12 from "./routes/greet/[name].tsx";
 import * as $13 from "./routes/html.tsx";
 import * as $14 from "./routes/index.tsx";
 import * as $15 from "./routes/myHandler.ts";
-import * as $16 from "./routes/plain.tsx";
-import * as $17 from "./routes/search.tsx";
-import * as $18 from "./routes/static.tsx";
+import * as $16 from "./routes/old/[...wildcard].tsx";
+import * as $17 from "./routes/plain.tsx";
+import * as $18 from "./routes/project.tsx";
+import * as $19 from "./routes/search.tsx";
+import * as $20 from "./routes/static.tsx";
+import * as $21 from "./routes/x.ts";
 import * as $$0 from "./islands/Countdown.tsx";
 import * as $$1 from "./islands/Counter.tsx";
 import * as $$2 from "./islands/Counter02.tsx";
@@ -44,9 +47,12 @@ const manifest = {
     "./routes/html.tsx": $13,
     "./routes/index.tsx": $14,
     "./routes/myHandler.ts": $15,
-    "./routes/plain.tsx": $16,
-    "./routes/search.tsx": $17,
-    "./routes/static.tsx": $18,
+    "./routes/old/[...wildcard].tsx": $16,
+    "./routes/plain.tsx": $17,
+    "./routes/project.tsx": $18,
+    "./routes/search.tsx": $19,
+    "./routes/static.tsx": $20,
+    "./routes/x.ts": $21,
   },
   islands: {
     "./islands/Countdown.tsx": $$0,
