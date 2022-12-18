@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from tqdm import tqdm
 import time
 
-from data_io import load_TCL_data
+from data_healer import load_TCL_data
 from TCL_crawling import __open_chrome
 
 
