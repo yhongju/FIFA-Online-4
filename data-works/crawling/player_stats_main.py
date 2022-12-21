@@ -1,5 +1,5 @@
 # 사용자 지정 함수 모듈 불러오기
-from modul import crawling
+from module import crawling
 
 # nexon developers open api를 사용하기 위한 모듈 import
 import requests
