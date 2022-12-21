@@ -1,19 +1,4 @@
-# If you can't beat them, join them
-> *Michael James Owen, Liverpool*
+# What is this project?
 
-## What is this project?
-- Recommend best football player in the video game FIFA Online 4
-- User can access to web browser
-
-```bash
-├── .github
-│   └── workflow
-├── LICENSE
-├── README.md
-├── data-works
-│   ├── crawling
-│   └── modeling
-├── requirements.txt
-└── server
-    └── src
-```
+- Recommend best football player fit to user's squad
+  > _In the online video game FIFA Online 4_
