@@ -170,8 +170,9 @@ def __df_teamcolor_relation_plus(driver,A,teamcolor_relation):
         
         return df_TC_relation_plus
     except:
-        print('error: To making dictionary is failed')
-        return dict_temp
+        print('error: To making dictionary is failed','\n', dict_temp)
+
+        
 
 
 def __merge_TC_relation(df_teamcolor_relation, df_TC_relation_plus):
