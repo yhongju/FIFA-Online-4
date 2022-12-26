@@ -134,3 +134,7 @@ dmypy.json
 
 # Dataset
 *.csv
+
+# Files to be fokred
+forked-files
+
