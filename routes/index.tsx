@@ -6,7 +6,7 @@ const Index = () => {
 
   return (
     // <div class="bg-gradient-to-tr from-red-500 to-purple-400 relative h-screen w-screen">
-    <div class="bg-black">
+    <div class="bg-black w-screen h-screen">
       {
         /* <img
         class="absolute inset-0 w-full h-full object-cover mix-blend-multiply filter brightness-50"
@@ -15,8 +15,15 @@ const Index = () => {
         draggable="false" // Ignore error: Type inference error
       /> */
       }
-      <video autoPlay loop={true} class="w-screen h-screen blur-xl">
-        <source src={"index.webm"} class="blur-xl" />
+      <video
+        autoPlay={true}
+        loop={true}
+        class="w-full h-full bg-black"
+        muted={true}
+        type="video/webm"
+        poster="logo.svg"
+      >
+        <source src={"index.webm"} />
       </video>
 
       <div class="absolute inset-0 flex flex-col justify-center items-center w-5/6 max-w-lg mx-auto text-center">
