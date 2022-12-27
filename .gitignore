@@ -137,3 +137,6 @@ dmypy.json
 
 # Forked files
 forks/
+
+# Video files
+static/*.webm
