@@ -134,3 +134,6 @@ dmypy.json
 
 # Dataset
 *.csv
+
+# Forked files
+forks/
