@@ -140,3 +140,6 @@ forks/
 
 # Video files
 static/*.webm
+
+# Background ran process log
+nohup.out
