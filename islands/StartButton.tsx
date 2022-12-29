@@ -1,4 +1,4 @@
-import { useContext } from "preact/hooks";
+import { useContext, useEffect } from "preact/hooks";
 import { StartContext } from "../routes/index.tsx";
 
 const StartButton = () => {
@@ -19,7 +19,10 @@ const StartButton = () => {
       <button
         class="text-palette-light text-palette-light text-base md:text-lg
                 lg:text-xl mt-10 bg-green-600 p-2 opacity-80"
-        onClick={() => setStarted && setStarted(true)}
+        onClick={() => {
+          setStarted && setStarted(true);
+          console.log("!");
+        }}
       >
         내 조건에 최적인 선수 바로찾기!
       </button>
