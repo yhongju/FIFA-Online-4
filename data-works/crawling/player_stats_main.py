@@ -1,5 +1,5 @@
 # 사용자 지정 함수 모듈 불러오기
-from module import crawling
+from module.crawling import *
 
 # nexon developers open api를 사용하기 위한 모듈 import
 import requests
@@ -17,7 +17,7 @@ spid_data = spid_url.json()
 df = pd.DataFrame(spid_data)
 
 # DaraFrane 변수를 사용자 지정 함수로 전달 및 반환값 변수 저장 // open api DataFrame을 전달값으로 주면, 크롤링 후 데이터를 dictionary data로 반환
-val_dict = crawling.crawling_to_dict(df)
+val_dict = crawling_to_dict(df)
 
 # 위 반환값인 dictionary data를 지정 함수로 전달 및 반환값 변수 저장 // 위 반환값을 전달값으로 주고, DataFrame 반환 및 csv파일로 저장
-test_df = crawling.dict_to_frame(val_dict)
+test_df = dict_to_frame(val_dict)

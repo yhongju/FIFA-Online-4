@@ -39,11 +39,12 @@ def crawling_to_dict(df):
     options.add_argument("--window-size=800,1200")
 
     # 필요 data를  list로 append 해주기 위해 list변수 지정
+    pk = [] # pk값
     name = [] # 선수명
     pay_side = [] # 급여
     position = [] # 포지션, 스탯?
     overall = [] # 선수 총 스탯
-    pomation = [] # 포지션 별 스탯
+    formation = [] # 포지션 별 스탯
     skill_swap = [] # 선수 특성
     etc_birth = [] # 선수 생년월일
     etc_height = [] # 선수 키
@@ -52,6 +53,8 @@ def crawling_to_dict(df):
     etc_skill = [] # 개인기 (별 6개 만점)
     etc_foot = [] # 주발? 약발
     etc_nation = [] # 선수 국가
+    etc_team = [] # 현제 소속 팀
+    etc_career = [] # 클럽 경력
     Sprint_speed  = [] # 속력
     Acceleration = [] # 가속력
     Finishing = [] # 결정력
@@ -103,11 +106,12 @@ def crawling_to_dict(df):
             time.sleep(A)
 
             # 위에서 지정한 list에 크롤링한 data append
+            pk.append(i)
             name.append(driver.find_element(By.XPATH, '//*[@id="middle"]/div/div/div[2]/div[2]/div/div[1]/div[2]/div[1]/div[2]').text)
             pay_side.append(driver.find_element(By.XPATH, '//*[@id="middle"]/div/div/div[2]/div[2]/div/div[1]/div[2]/div[1]/div[3]/div').text)
             position.append(driver.find_element(By.XPATH, '//*[@id="middle"]/div/div/div[2]/div[2]/div/div[1]/div[2]/div[2]/span/span[1]').text)
             overall.append(driver.find_element(By.XPATH, '//*[@id="middle"]/div/div/div[2]/div[2]/div/div[1]/div[2]/div[2]/span/span[2]').text)
-            pomation.append(driver.find_element(By.XPATH, '//*[@id="middle"]/div/div/div[2]/div[2]/div/div[1]/div[3]').text)
+            formation.append(driver.find_element(By.XPATH, '//*[@id="middle"]/div/div/div[2]/div[2]/div/div[1]/div[3]').text)
             skill_swap.append(driver.find_element(By.XPATH, '//*[@id="middle"]/div/div/div[2]/div[2]/div/div[1]/div[2]/div[5]').text)
             etc_birth.append(driver.find_element(By.XPATH, '//*[@id="middle"]/div/div/div[2]/div[2]/div/div[1]/div[2]/div[3]/span[1]').text)
             etc_height.append(driver.find_element(By.XPATH, '//*[@id="middle"]/div/div/div[2]/div[2]/div/div[1]/div[2]/div[3]/span[2]').text)
@@ -116,6 +120,14 @@ def crawling_to_dict(df):
             etc_skill.append(driver.find_element(By.XPATH, '//*[@id="middle"]/div/div/div[2]/div[2]/div/div[1]/div[2]/div[3]/span[5]/span').text)
             etc_foot.append(driver.find_element(By.XPATH, '//*[@id="middle"]/div/div/div[2]/div[2]/div/div[1]/div[2]/div[3]/span[6]').text)
             etc_nation.append(driver.find_element(By.XPATH, '//*[@id="middle"]/div/div/div[2]/div[2]/div/div[1]/div[2]/div[4]/div[2]/span[2]').text)
+            try:
+                etc_team.append(driver.find_element(By.XPATH, '//*[@id="middle"]/div/div/div[2]/div[2]/div/div[1]/div[2]/div[4]/div[1]/span[2]').text)
+            except:
+                etc_team.append("-")
+            try:
+                etc_career.append(driver.find_element(By.XPATH, '//*[@id="middle"]/div/div/div[4]/div[1]/div[2]/div[2]/ul').text)
+            except:
+                etc_career.append("-")
             Sprint_speed.append(driver.find_element(By.XPATH, '//*[@id="middle"]/div/div/div[2]/div[2]/div/div[3]/ul[1]/li[1]/div[2]').text)
             Acceleration.append(driver.find_element(By.XPATH, '//*[@id="middle"]/div/div/div[2]/div[2]/div/div[3]/ul[1]/li[2]/div[2]').text)
             Finishing.append(driver.find_element(By.XPATH, '//*[@id="middle"]/div/div/div[2]/div[2]/div/div[3]/ul[1]/li[3]/div[2]').text)
@@ -159,11 +171,12 @@ def crawling_to_dict(df):
             break
     
     # 위에서 크롤링하고 list로 append한 데이터를 dictionary 화
-    val_dict = {'name' : [val for val in name], # 선수명
+    val_dict = {"pk" : [val for val in pk], # pk
+        'name' : [val for val in name], # 선수명
         'pay_side' : [val for val in pay_side], # 급여
         'position' : [val for val in position], # 포지션, 스탯?
         'overall' : [val for val in overall], # 선수 총 스탯
-        'pomation' : [val for val in pomation],
+        'formation' : [val for val in formation],
         'skill_swap' : [val for val in skill_swap], # 선수 특성
         'etc_birth' : [val for val in etc_birth], # 선수 생년월일
         'etc_height' : [val for val in etc_height], # 선수 키
@@ -172,6 +185,8 @@ def crawling_to_dict(df):
         'etc_skill' : [val for val in etc_skill], # 개인기 (별 6개 만점)
         'etc_foot' : [val for val in etc_foot], # 주발? 약발
         'etc_nation' : [val for val in etc_nation], # 선수 국가
+        'etc_team' : [val for val in etc_team], # 현제 소속 클럽
+        'etc_career' : [val for val in etc_career], # 클럽 경력
         'Sprint_speed'  : [val for val in Sprint_speed], # 속력
         'Acceleration' : [val for val in Acceleration], # 가속력
         'Finishing' : [val for val in Finishing], # 결정력

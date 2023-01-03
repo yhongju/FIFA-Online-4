@@ -80,16 +80,15 @@ def pretreatment_pomation(df):
             'Stand_tackle', 'Interception', 'Heading', 'Slide_tackle', 'Strength',
             'Stamina', 'Aggression', 'Jumping', 'Composure', 'GK_Diving',
             'GK_Handling', 'GK_Kicking', 'GK_Reflexes', 'GK_Positioning',
-            'team', 'team_now', 'price']]
+            'etc_team', 'etc_career', 'price']]
 
     return df
 
 
 def pretreatment_skill_swap(df):
-    # skill_swap 만 별도로 추출하여 dataFrame 만들기
-    skill_swap_df = df[['skill_swap']]
-
-    # 불 필요 값 제거
-    skill_swap_df.skill_swap.replace({"특성\n" : ""}, regex=True, inplace=True)
-
     
+    # 불 필요 값 제거
+    df.skill_swap.replace({"특성\n" : ""}, regex=True, inplace=True)
+
+    return df
+
